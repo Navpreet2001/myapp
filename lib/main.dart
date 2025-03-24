@@ -9,11 +9,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home:HomePage()
-    );
+    return MaterialApp(home: HomePage());
   }
 }
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -24,12 +23,17 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(      
-      appBar: AppBar(backgroundColor: Colors.red),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [FlutterLogo(size: 45)],
+        ),
+      ),
       drawer: Drawer(),
       body: Container(color: Colors.white),
       bottomNavigationBar: BottomAppBar(),
-      );
-
+    );
   }
 }
